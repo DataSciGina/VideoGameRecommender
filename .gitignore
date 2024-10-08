@@ -1,0 +1,12 @@
+# Ignorar archivos compilados
+*.pyc
+
+# Ignorar archivos finales
+*.csv
+*.parquet
+
+# Ignorar directorios específicos
+/src
+
+# Ignorar archivos de entorno
+.env
