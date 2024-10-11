@@ -40,5 +40,6 @@ Deben respetarse todas las etapas de ejecución del proyecto para que los result
 
 <ol>
     <li><b>ETL (Extraction - Transform - Load):</b> En la carpeta ETL se pueden encontrar los distintos archivos de tipo Jupyter Notebook que se encargan de extraer la data de los DataSets en la carpeta data. Los archivos no tienen un orden específico para ejecutarse, ya que su función es abrir y limpiar los DataSets para luego exportarlos listos para el proceso de EDA. Cada paso está detallado en los markdowns.</li>
+    <li><b>Feature Egineering:</b> Ejecutarlo para realizar el análisis de sentimientos en el DataSet user_reviews y exportar un archivo fácilmente trabajable en los prcesos de EDA y Machine Learning.</li>
     <li><b>EDA (Análisis Exploratorio de Datos):</b> Aún en proceso.</li>
 </ol>
