@@ -16,7 +16,7 @@ def get_file(name_file):
 
 def get_frequency(dfr, elem, control=None):
     '''
-    Recibe un DataFrame, el nombre de la columna sobre la cual sacar la frecuencia y el nombre de una columna de control para usar de referencia si se hizo un explode.
+    Recibe un DataFrame, el nombre de la columna sobre la cual sacar la frecuencia y el nombre de una columna de control para usar de referencia si se hizo un explode para tratar con elementos repetidos o no.
     Retorna un DataFrame con los elementos únicos, la cantidad de veces que aparece y el porcentaje de estos respecto al total de valores en el DataFrame.
     '''
     # si existe una columna de control se aislan las columnas y se eliminan los duplicados
