@@ -2,8 +2,10 @@
 from fastapi import FastAPI
 import uvicorn
 import pandas as pd
+from ML.recommendation_system import get_recommendations, decode_game, matrix
 
-###################### se crea la instancia y el df
+###################### se crea la instancia de la matríz
+matriz = matrix()
 
 # se crea una instancia de FastAPI y se personaliza
 app = FastAPI()
@@ -234,6 +236,21 @@ async def developer_reviews_analysis(developer: str):
     return {
         developer: [{"Negative": developer_reviews['review_neg'], "Positive": developer_reviews['review_pos']}]
     }
+
+@app.get("/recomendacion_juego/{game}")
+async def recomendacion_juego(id):
+    '''
+    Recibe el ID de un juego y retorna cinco juegos recomendados similares.
+    '''
+    # Filtrar los juegos similares al dado
+    ids = get_recommendations(id)
+
+    if matriz:
+        games = ids['id'].apply(decode_game, similarity_matrix=matriz)
+    # traer nombres
+    games = ids['id'].apply(decode_game)
+    return games
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
