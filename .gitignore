@@ -9,5 +9,7 @@ user_items.csv
 steam_games.parquet
 user_reviews.parquet
 
+recommendation_sistem.ipynb
+
 # Ignorar archivos de entorno
 .env
