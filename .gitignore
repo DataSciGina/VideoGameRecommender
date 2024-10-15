@@ -6,6 +6,8 @@ steam_games.csv
 user_reviews.csv
 user_items.csv
 
+*.csv
+
 steam_games.parquet
 user_reviews.parquet
 

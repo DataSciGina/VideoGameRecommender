@@ -1,9 +1,22 @@
 <h1 align='center'> VideoGameRecommender </h1>
 <p align='center'>Video game recommendation system (Sistema de recomendación de videojuegos)<P>
 
-<h2 align='center'>Descripción del proyecto</h2>
+<h2 align='center' id='introduccion'>Descripción del proyecto</h2>
 
 Este proyecto consiste en el desarrollo de un sistema de recomendación de videojuegos para usuarios, diseñado desde cero para un MVP (Minimum Viable Product). Se enfoca en leer y procesar un conjunto de datos crudos, transformándolos y estructurándolos de manera eficiente para facilitar su uso en análisis de datos y aprendizaje automático.
+
+### Tabla de contenido
+1. [Introducción](#introducción)
+2. [Instalación y Requisitos](#instalacion-y-requisitos)
+3. [Estructura del Proyecto](#estructura-del-proyecto)
+4. [Uso y Ejecución](#uso-y-ejecución)
+5. [Datos y Fuentes](#datos-y-fuentes)
+6. [Metodología](#metodología)
+7. [Resultados y Conclusiones](#resultados-y-conclusiones)
+8. [Contribución y Colaboración](#contribución-y-colaboración)
+9. [Licencia](#licencia)
+
+<h3 align='center' id='instalacion-y-requisitos'>Instalación y Requisitos</h3>
 
 <h3 align='center'>Objetivos</h3>
 <ul>
