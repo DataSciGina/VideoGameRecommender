@@ -2,11 +2,12 @@
 *.pyc
 
 # Ignorar archivos finales
-*.csv
-*.parquet
+steam_games.csv
+user_reviews.csv
+user_items.csv
 
-# Ignorar directorios específicos
-/src
+steam_games.parquet
+user_reviews.parquet
 
 # Ignorar archivos de entorno
 .env
