@@ -238,7 +238,7 @@ async def developer_reviews_analysis(developer: str):
         developer: [{"Negative": developer_reviews['review_neg'], "Positive": developer_reviews['review_pos']}]
     }
 
-@app.get("/recomendacion_juego/{game}")
+@app.get("/recomendacion_juego/{id}")
 async def recomendacion_juego(id: int):
     '''
     Recibe el ID de un juego y retorna cinco juegos recomendados similares.
