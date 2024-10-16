@@ -3,6 +3,7 @@ from fastapi import FastAPI
 import uvicorn
 import pandas as pd
 from ML.recommendation_system import get_recommendations, decode_game
+import os
 
 # se crea una instancia de FastAPI y se personaliza
 app = FastAPI()
@@ -11,11 +12,11 @@ app.title = "API de Sistema de Recomendaciones de Steam"
 # se crea una función para importar los archivos y manejar los errores
 def load_data():
     try:
-        df = pd.read_parquet(r'.\src\Parquet\games.parquet')
+        df = pd.read_parquet(os.path.abspath('./src/Parquet/games.parquet'))
         print('games.parquet cargado')
-        users = pd.read_parquet(r'.\src\Parquet\user_items.parquet')
+        users = pd.read_parquet(os.path.abspath('./src/Parquet/user_items.parquet'))
         print('user_items.parquet cargado')
-        reviews = pd.read_parquet(r'.\src\Parquet\user_reviews_sentiment_analysis.parquet')
+        reviews = pd.read_parquet(os.path.abspath('./src/Parquet/user_reviews_sentiment_analysis.parquet'))
         print('user_reviews_sentiment_analysis.parquet cargado')
     #except FileNotFoundError as e:
     #    print("Archivo no encontrado. Intentando cargar archivos CSV...")
