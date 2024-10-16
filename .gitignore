@@ -5,8 +5,12 @@
 steam_games.csv
 user_reviews.csv
 user_items.csv
+dummies.csv
+games.csv
+user_reviews_sentiment_analysis.csv
 
 *.csv
+
 
 steam_games.parquet
 user_reviews.parquet
@@ -15,3 +19,4 @@ recommendation_sistem.ipynb
 
 # Ignorar archivos de entorno
 .env
+./CSV

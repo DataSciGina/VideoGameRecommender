@@ -6,17 +6,20 @@
 Este proyecto consiste en el desarrollo de un sistema de recomendación de videojuegos para usuarios, diseñado desde cero para un MVP (Minimum Viable Product). Se enfoca en leer y procesar un conjunto de datos crudos, transformándolos y estructurándolos de manera eficiente para facilitar su uso en análisis de datos y aprendizaje automático.
 
 ### Tabla de contenido
-1. [Introducción](#introducción)
+1. [Introducción](#introduccion)
 2. [Instalación y Requisitos](#instalacion-y-requisitos)
 3. [Estructura del Proyecto](#estructura-del-proyecto)
-4. [Uso y Ejecución](#uso-y-ejecución)
+4. [Uso y Ejecución](#uso-y-ejecucion)
 5. [Datos y Fuentes](#datos-y-fuentes)
-6. [Metodología](#metodología)
+6. [Metodología](#metodologia)
 7. [Resultados y Conclusiones](#resultados-y-conclusiones)
-8. [Contribución y Colaboración](#contribución-y-colaboración)
+8. [Contribución y Colaboración](#contribución-y-colaboracion)
 9. [Licencia](#licencia)
 
 <h3 align='center' id='instalacion-y-requisitos'>Instalación y Requisitos</h3>
+Todas las librerías y dependencias se encuentran en el archivo requirements.txt. Todo lo que se tiene que hacer es asegurarse de que la consola se encuentra en la misma carpeta en la que el archivo se encuentra y escribir:
+
+    - pip install requirements.txt
 
 <h3 align='center'>Objetivos</h3>
 <ul>
