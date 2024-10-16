@@ -16,15 +16,15 @@ def load_data():
         df = pd.read_parquet(r'.\src\Parquet\games.parquet')
         users = pd.read_parquet(r'.\src\Parquet\user_items.parquet')
         reviews = pd.read_parquet(r'.\src\Parquet\user_reviews_sentiment_analysis.parquet')
-    except FileNotFoundError as e:
-        print("Archivo no encontrado. Intentando cargar archivos CSV...")
-        try:
-            df = pd.read_csv(f'.\src\CSV\games.csv')
-            users = pd.read_csv(r'.\src\CSV\user_items.csv')
-            reviews = pd.read_csv(r'.\src\CSV\user_reviews_sentiment_analysis.csv')
-        except Exception as e:
-            print(f"Error al cargar los datos desde CSV: {e}")
-            return None, None, None
+    #except FileNotFoundError as e:
+    #    print("Archivo no encontrado. Intentando cargar archivos CSV...")
+    #    try:
+    #        df = pd.read_csv(f'.\src\CSV\games.csv')
+    #        users = pd.read_csv(r'.\src\CSV\user_items.csv')
+    #        reviews = pd.read_csv(r'.\src\CSV\user_reviews_sentiment_analysis.csv')
+    #    except Exception as e:
+    #        print(f"Error al cargar los datos desde CSV: {e}")
+    #        return None, None, None
     except Exception as e:
         print(f"Error al cargar los datos desde parquet: {e}")
         return None, None, None
