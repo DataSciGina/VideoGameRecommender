@@ -4,10 +4,14 @@ import uvicorn
 import pandas as pd
 from ML.recommendation_system import get_recommendations, decode_game
 import os
+from joblib import load
 
 # se crea una instancia de FastAPI y se personaliza
 app = FastAPI()
 app.title = "API de Sistema de Recomendaciones de Steam"
+
+# se carga el modelo de recomendación
+model = load(os.path.abspath('./ML/matrix.joblib'))
 
 # se crea una función para importar los archivos y manejar los errores
 def load_data():
@@ -244,7 +248,7 @@ async def recomendacion_juego(id: int):
     Recibe el ID de un juego y retorna cinco juegos recomendados similares.
     '''
     # Filtrar los juegos similares al dado
-    ids = get_recommendations(id)
+    ids = get_recommendations(id, model)
 
     # traer nombres
     games = ids['id'].apply(decode_game)
