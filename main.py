@@ -13,9 +13,9 @@ app.title = "API de Sistema de Recomendaciones de Steam"
 # se crea una función para importar los archivos y manejar los errores
 def load_data():
     try:
-        df = pd.read_parquet(r'.\src\Parquet\games.parquet')
-        users = pd.read_parquet(r'.\src\Parquet\user_items.parquet')
-        reviews = pd.read_parquet(r'.\src\Parquet\user_reviews_sentiment_analysis.parquet')
+        df = pd.read_parquet(r'\src\Parquet\games.parquet')
+        users = pd.read_parquet(r'\src\Parquet\user_items.parquet')
+        reviews = pd.read_parquet(r'\src\Parquet\user_reviews_sentiment_analysis.parquet')
     #except FileNotFoundError as e:
     #    print("Archivo no encontrado. Intentando cargar archivos CSV...")
     #    try:
