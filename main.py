@@ -4,8 +4,6 @@ import uvicorn
 import pandas as pd
 from ML.recommendation_system import get_recommendations, decode_game
 
-###################### se crea la instancia de la matríz
-
 # se crea una instancia de FastAPI y se personaliza
 app = FastAPI()
 app.title = "API de Sistema de Recomendaciones de Steam"
@@ -13,9 +11,12 @@ app.title = "API de Sistema de Recomendaciones de Steam"
 # se crea una función para importar los archivos y manejar los errores
 def load_data():
     try:
-        df = pd.read_parquet(r'\src\Parquet\games.parquet')
-        users = pd.read_parquet(r'\src\Parquet\user_items.parquet')
-        reviews = pd.read_parquet(r'\src\Parquet\user_reviews_sentiment_analysis.parquet')
+        df = pd.read_parquet(r'.\src\Parquet\games.parquet')
+        print('games.parquet cargado')
+        users = pd.read_parquet(r'.\src\Parquet\user_items.parquet')
+        print('user_items.parquet cargado')
+        reviews = pd.read_parquet(r'.\src\Parquet\user_reviews_sentiment_analysis.parquet')
+        print('user_reviews_sentiment_analysis.parquet cargado')
     #except FileNotFoundError as e:
     #    print("Archivo no encontrado. Intentando cargar archivos CSV...")
     #    try:
@@ -49,7 +50,7 @@ if df is not None and users is not None and reviews is not None:
     # Unir users con juegos (df) asegurándote de que no haya duplicación de la columna id
     user_games = users.merge(unique_games[['id', 'price']], 
                             left_on='item_id', 
-                            right_on='id', 
+                            right_on='id',
                             how='left').drop(columns=['id'])
 
     # Unir el resultado anterior con reviews
